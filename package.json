@@ -11,6 +11,7 @@
     "matchdep": "~0.1.2"
   },
   "scripts": {
+    "sass": "grunt compass",
     "test": "grunt --verbose"
   }
 }
