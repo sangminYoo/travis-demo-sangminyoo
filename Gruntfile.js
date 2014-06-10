@@ -5,27 +5,26 @@ require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 grunt.initConfig({
 	jshint: {
-    	all: ['Gruntfile.js', 'hello.js']
+    	all: ['Gruntfile.js', 'js/script.js']
     },
     compass: {                  // Task
-    dist: {                   // Target
-      options: {              // Target options
-        sassDir: 'sass',
-        cssDir: 'css',
-        environment: 'production'
-      }
-    },
-    dev: {                    // Another target
-      options: {
-        sassDir: 'sass',
-        cssDir: 'css'
-      }
-    }
-  }
+	    dist: {                   // Target
+	    	options: {              // Target options
+	        	sassDir: 'sass',
+	        	cssDir: 'css',
+	        	environment: 'production'
+	      	}
+	    },
+	    dev: {                    // Another target
+	      	options: {
+	        	sassDir: 'sass',
+	        	cssDir: 'css'
+	      	}
+	    }
+  	}
 });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.registerTask('default', ['jshint', 'compass']);
-
 
 };
