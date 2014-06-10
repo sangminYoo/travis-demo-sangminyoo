@@ -1,1 +1,10 @@
-html body{width:100%;background-color:#555;color:#fff}html body .wrapper{height:auto}
+/* line 2, ../sass/style.scss */
+html body {
+  width: 100%;
+  background-color: blue;
+  color: #fff;
+}
+/* line 6, ../sass/style.scss */
+html body .wrapper {
+  height: auto;
+}

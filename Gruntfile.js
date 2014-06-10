@@ -7,26 +7,32 @@ grunt.initConfig({
 	jshint: {
     	all: ['Gruntfile.js', 'js/script.js']
     },
-    compass: {                  // Task
-	    dist: {                   // Target
-	    	options: { 
-	        	sassDir: 'sass/style.scss',
-	        	cssDir: 'css/style.css',
-	        	debugInfo : true,
-	        	trace: true,
-	        	environment: 'production'
-	      	}
-	    }/*,
-	    dev: {                    // Another target
-	      	options: {
-	        	sassDir: 'sass',
-	        	cssDir: 'css'
-	      	}
-	    }*/
-  	}
+    compass: {
+			dist: {
+				options: {
+					sassDir: 'sass',
+					cssDir: 'css',
+					environment: 'production',
+					relativeAssets: true,
+                	boring: false,
+                	debugInfo: true
+				},
+				files: {
+	                'css/style.css': 'sass/style.scss'
+	            }
+			}
+		},
+	watch: {
+		css: {
+			files: '**/*.scss',
+			tasks: ['compass']
+		}
+	}
 });
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.registerTask('default', ['jshint', 'compass']);
 
 };
