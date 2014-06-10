@@ -5,20 +5,20 @@ require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 grunt.initConfig({
 	jshint: {
-    	all: ['Gruntfile.js', 'js/script.js']
+    	all: ['Gruntfile.js', 'src/js/script.js']
     },
     compass: {
 			dist: {
 				options: {
 					sassDir: 'sass',
-					cssDir: 'css',
+					cssDir: 'src/css',
 					environment: 'production',
 					relativeAssets: true,
                 	boring: false,
                 	debugInfo: true
 				},
 				files: {
-	                'css/style.css': 'sass/style.scss'
+	                'src/css/style.css': 'sass/style.scss'
 	            }
 			}
 		},
