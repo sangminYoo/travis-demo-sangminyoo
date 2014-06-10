@@ -1,8 +1,14 @@
 language: node_js
 node_js:
   - "0.10"
+env:
+  global:
+    - "FTP_USER=travisci"
+    - "FTP_PASSWORD=iamotadev"
 before_install:
   - gem update --system
   - gem install sass --version "=3.3.7"
   - gem install compass --version "=0.12.3"
   - npm install -g grunt-cli
+after_success:
+    "curl --ftp-create-dirs -T uploadfilename -u $FTP_USER:$FTP_PASSWORD ftp://travisci.iamotadev.com/travisci.iamotadev.com"
