@@ -11,4 +11,4 @@ before_install:
   - gem install compass --version "=0.12.3"
   - npm install -g grunt-cli
 after_success:
-  "find * -type f -exec curl -v -u travisci:iamotadev --ftp-create-dirs -T {} ftp://travisci.iamotadev.com/travisci.iamotadev.com/{} \ ;"
+  "find * -type f -exec curl -v -u travisci:iamotadev --ftp-create-dirs -T {} ftp://travisci.iamotadev.com/travisci.iamotadev.com/{} \\;"
