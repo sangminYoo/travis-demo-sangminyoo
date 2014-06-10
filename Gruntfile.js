@@ -9,18 +9,20 @@ grunt.initConfig({
     },
     compass: {                  // Task
 	    dist: {                   // Target
-	    	options: {              // Target options
-	        	sassDir: 'sass',
-	        	cssDir: 'css',
+	    	options: { 
+	        	sassDir: 'sass/style.scss',
+	        	cssDir: 'css/style.css',
+	        	debugInfo : true,
+	        	trace: true,
 	        	environment: 'production'
 	      	}
-	    },
+	    }/*,
 	    dev: {                    // Another target
 	      	options: {
 	        	sassDir: 'sass',
 	        	cssDir: 'css'
 	      	}
-	    }
+	    }*/
   	}
 });
 
