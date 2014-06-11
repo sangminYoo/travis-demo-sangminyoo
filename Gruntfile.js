@@ -10,7 +10,6 @@ grunt.initConfig({
     compass: {
 			dist: {
 				options: {
-					basePath: '',
 					sassDir: 'sass',
 					cssDir: 'src/css',
 					environment: 'production',

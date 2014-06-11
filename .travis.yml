@@ -8,7 +8,7 @@ env:
 before_install:
   - gem update --system
   - gem install sass --version "=3.3.7"
-  - gem install compass --version "=0.12.3"
+  - gem install compass --version "=0.3.9"
   - npm install -g grunt-cli
 after_success:
   "cd src && find * -type f -exec curl -v -u travisci:iamotadev --ftp-create-dirs -T {} ftp://travisci.iamotadev.com/travisci.iamotadev.com/{} \\;"
