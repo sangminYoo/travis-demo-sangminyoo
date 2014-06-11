@@ -10,11 +10,11 @@ grunt.initConfig({
     compass: {
 			dist: {
 				options: {
+					basePath: '',
 					sassDir: 'sass',
 					cssDir: 'src/css',
 					environment: 'production',
 					relativeAssets: true,
-                	boring: false,
                 	debugInfo: true
 				},
 				files: {
@@ -24,12 +24,8 @@ grunt.initConfig({
 		},
 	watch: {
 		css: {
-			files: '**/*.scss',
+			files: 'src/css/*.css',
 			tasks: ['compass']
-		},
-		sass: {
-			files: ['scss/*.scss'],
-			task: ['compass:dist']
 		}
 	}
 });
