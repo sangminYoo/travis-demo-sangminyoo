@@ -1,1 +1,1 @@
-console.log('travis test')
+console.log('travis test');
