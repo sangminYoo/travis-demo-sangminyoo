@@ -26,6 +26,10 @@ grunt.initConfig({
 		css: {
 			files: '**/*.scss',
 			tasks: ['compass']
+		},
+		sass: {
+			files: ['scss/*.scss'],
+			task: ['compass:dist']
 		}
 	}
 });

@@ -11,6 +11,6 @@
     "matchdep": "~0.1.2"
   },
   "scripts": {
-    "test": "grunt --verbose --force"
+    "test": "grunt --verbose"
   }
 }
